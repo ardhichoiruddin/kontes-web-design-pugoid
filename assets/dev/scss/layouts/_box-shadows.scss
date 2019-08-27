@@ -1,0 +1,9 @@
+
+
+@mixin box-shadow($leftRight, $topDown, $blur, $spreadRadius, $color) {
+    box-shadow: $leftRight $topDown $blur $spreadRadius $color;
+}
+
+.box-shadow{
+    box-shadow: -7px 7px 58px -19px rgba(0,0,0,0.62);
+}

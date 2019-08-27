@@ -1,0 +1,19 @@
+@mixin respond-to($media) {
+
+    @if($media == mobile){
+        @media only screen and (max-width: $mobile-device ) { @content; }
+    }
+
+    @else if($media == tablet){
+        @media only screen and (max-width: $tablet-device ) { @content; }
+    }
+
+    @else if($media == dekstop){
+        @media only screen and (max-width: $dekstop-device ) { @content; }
+    }
+
+    @else if($media == dekstop-lg){
+        @media only screen and (max-width: $ekstra-dekstop-device ) { @content; }
+    }
+
+}

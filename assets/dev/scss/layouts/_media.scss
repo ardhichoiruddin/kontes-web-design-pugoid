@@ -1,0 +1,31 @@
+
+
+.media{
+    display: flex;
+    overflow: hidden;
+    border: solid 1px #000;
+    border-radius: 5px;
+
+    .media-image{
+
+        &.top{
+            align-self: flex-start;
+        }
+        &.bottom{
+            align-self: flex-end;
+        }
+    }
+
+    .media-body{
+
+        padding: 0.5rem;
+
+        &.top{
+            align-self: flex-start;
+        }
+
+        &.bottom{
+            align-self: flex-end;
+        }
+    }
+}
