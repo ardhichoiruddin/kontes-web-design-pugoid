@@ -22,7 +22,7 @@
                     <a href="">Profil</a>
                     <div class="dropdown">
                         <ul>
-                            <li><a href="">Visi dan Misi</a></li>
+                            <li><a href="?page=berita-detail">Visi dan Misi</a></li>
                             <li><a href="">Sejarah</a></li>
                             <li><a href="">Tugas dan Fungsi</a></li>
                             <li><a href="">Struktur Organisasi</a></li>
