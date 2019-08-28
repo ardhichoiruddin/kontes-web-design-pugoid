@@ -3,6 +3,7 @@
 <div class="detail-berita js-cd-panel-main">
     <div class="detail-berita__header">
         <h1>Konstruksi Infrastruktur Dasar Ibu Kota Negara di Kalimantan Timur Dimulai Pertengahan 2020 </h1>
+        <button class="js-cd-close">Tutup</button>
     </div>
     <div class="detail-berita__body">
     <img src="assets/dist/images/index-berita/berita-terpopuler/3.png" alt="" class="image-article">
@@ -22,4 +23,4 @@
         </div>
     </div>
 </div>
-<div class="backdrop cd-btn js-cd-panel-trigger js-cd-panel-main js-cd-close" data-panel="main"></div>
+<div class="backdrop" data-panel="main"></div>

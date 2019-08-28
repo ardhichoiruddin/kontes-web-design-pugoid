@@ -273,8 +273,8 @@ body {
 @-webkit-keyframes dropdown-animation {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 60%, 0);
-            transform: translate3d(0, 60%, 0); }
+    -webkit-transform: translate3d(0, 100px, 0);
+            transform: translate3d(0, 100px, 0); }
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -283,8 +283,8 @@ body {
 @-moz-keyframes dropdown-animation {
   from {
     opacity: 0;
-    -moz-transform: translate3d(0, 60%, 0);
-         transform: translate3d(0, 60%, 0); }
+    -moz-transform: translate3d(0, 100px, 0);
+         transform: translate3d(0, 100px, 0); }
   to {
     opacity: 1;
     -moz-transform: translate3d(0, 0, 0);
@@ -293,7 +293,7 @@ body {
 @-o-keyframes dropdown-animation {
   from {
     opacity: 0;
-    transform: translate3d(0, 60%, 0); }
+    transform: translate3d(0, 100px, 0); }
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0); } }
@@ -301,9 +301,9 @@ body {
 @keyframes dropdown-animation {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 60%, 0);
-       -moz-transform: translate3d(0, 60%, 0);
-            transform: translate3d(0, 60%, 0); }
+    -webkit-transform: translate3d(0, 100px, 0);
+       -moz-transform: translate3d(0, 100px, 0);
+            transform: translate3d(0, 100px, 0); }
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -370,8 +370,18 @@ body {
     list-style: none;
     margin-top: 0; }
     .berita-terikini-front .slider-news .news-box {
-      width: 260px;
+      width: 310px;
       padding: 1rem; }
+      .berita-terikini-front .slider-news .news-box img.img-front {
+        width: 60px;
+        height: 60px;
+        -o-object-fit: cover;
+           object-fit: cover;
+        margin-right: 8px;
+        -webkit-border-radius: 3px;
+           -moz-border-radius: 3px;
+                border-radius: 3px;
+        opacity: 0.9; }
       .berita-terikini-front .slider-news .news-box h4 {
         font-size: 0.938rem;
         line-height: 1.5;
@@ -384,6 +394,12 @@ body {
         font-weight: 500; }
       .berita-terikini-front .slider-news .news-box .time {
         margin-top: 0.5rem; }
+        .berita-terikini-front .slider-news .news-box .time img {
+          display: inline; }
+        .berita-terikini-front .slider-news .news-box .time span {
+          display: inline; }
+      .berita-terikini-front .slider-news .news-box > div {
+        width: 100%; }
 
 .sorot {
   background-color: #364878; }

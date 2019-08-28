@@ -65,7 +65,7 @@
                     @keyframes dropdown-animation{
                         from{
                             opacity: 0;
-                            transform: translate3d(0, 60%, 0);
+                            transform: translate3d(0, 100px, 0);
                         }
 
                         to{
@@ -188,8 +188,17 @@
     
         .news-box{
     
-            width: 260px;
+            width: 310px;
             padding: 1rem;
+
+            img.img-front{
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                margin-right: 8px;
+                border-radius: 3px;
+                opacity: 0.9;
+            }
         
             h4{
                 font-size: 0.938rem;
@@ -209,6 +218,18 @@
         
             .time{
                 margin-top: 0.5rem;
+
+                img{
+                    display: inline;
+                }
+
+                span{
+                    display: inline;
+                }
+            }
+
+            > div{
+                width: 100%;
             }
         }
     

@@ -22,39 +22,57 @@
     </div>
     <ul class="slider-news">
         <li>
-            <div class="news-box">
-                <h4><a href="">Porseni Kementrian PUPR Meyemarakan Peringatan HUT ...</a></h4>
-                <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+            <div class="news-box d-flex align-items-start">
+                <img class="img-front" src="assets/dist/images/sorot1.png" alt="">
+                <div>
+                    <h4><a href="">Porseni Kementrian PUPR Meyemarakan Peringatan HUT ...</a></h4>
+                    <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+                </div>
             </div>
         </li>
         <li>
-            <div class="news-box">
-                <h4><a href="">Menteri Basuki Penghargaan Top 10 Most Outstanding</a></h4>
-                <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+            <div class="news-box  d-flex align-items-start">
+                <img class="img-front" src="assets/dist/images/sorot1.png" alt="">
+                <div>
+                    <h4><a href="">Menteri Basuki Penghargaan Top 10 Most Outstanding</a></h4>
+                    <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+                </div>
             </div>
         </li>
         <li>
-            <div class="news-box">
-                <h4><a href="">Porseni Kementrian PUPR Meyemarakan Peringatan HUT ...</a></h4>
-                <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+            <div class="news-box d-flex align-items-start">
+                <img class="img-front" src="assets/dist/images/sorot1.png" alt="">
+                <div>
+                    <h4><a href="">Porseni Kementrian PUPR Meyemarakan Peringatan HUT ...</a></h4>
+                    <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+                </div>
             </div>
         </li>
         <li>
-            <div class="news-box">
-                <h4><a href="">Semangat Bung Hatta Mewujudkan Perumahan Rakyat Terus dan Terus</a></h4>
-                <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+            <div class="news-box d-flex align-items-start">
+                <img class="img-front" src="assets/dist/images/sorot1.png" alt="">
+                <div>
+                    <h4><a href="">Semangat Bung Hatta Mewujudkan Perumahan Rakyat Terus dan Terus</a></h4>
+                    <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+                </div>
             </div>
         </li>
         <li>
-            <div class="news-box">
-                <h4><a href="">Jiwa Anak Muda selalu membuat inovasi dan kreatifitas</a></h4>
-                <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+            <div class="news-box d-flex align-items-start">
+                <img class="img-front" src="assets/dist/images/sorot1.png" alt="">
+                <div>
+                    <h4><a href="">Jiwa Anak Muda selalu membuat inovasi dan kreatifitas</a></h4>
+                    <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+                </div>
             </div>
         </li>
         <li>
-            <div class="news-box">
-                <h4><a href="">Porseni Kementrian PUPR Meyemarakan Peringatan HUT ...</a></h4>
-                <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+            <div class="news-box d-flex align-items-start">
+                <img class="img-front" src="assets/dist/images/sorot1.png" alt="">
+                <div>
+                    <h4><a href="">Porseni Kementrian PUPR Meyemarakan Peringatan HUT ...</a></h4>
+                    <div class="time"><img src="assets/dist/images/time.svg" alt="" width="10px"> <span>7 September 2019</span></div>
+                </div>
             </div>
         </li>
     </ul>
