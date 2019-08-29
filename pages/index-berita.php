@@ -1,16 +1,36 @@
+<div class="container">
 
- <div class="sorot">
-   
-   <div class="d-flex">
-       <div class="sorot-title">
-           <h1>Kementerian PUPR Resmikan Rusun ASN Ditjen Imigrasi Kota Batam </h1>
-           <button>Lihat detail berita</button>
-       </div>
-       <div class="sorot-image">
-           <img src="assets/dist/images/index-berita/sorot1.png" alt="">
-       </div>
-   </div>
+    <h1 class="head-title-first">Berita Kementrian Pekerjaan Umum dan Perumahan Rakyat</h1>
 
+    <div class="sorot">
+        
+        <div class="sorot-image">
+            <div class="sorot-image__box">
+                <img src="assets/dist/images/index-berita/berita-terkini/5.jpeg" alt="">
+            </div>
+            <div class="sorot-image__box">
+                <img src="assets/dist/images/index-berita/berita-terkini/4.jpg" alt="">
+            </div>
+            <div class="sorot-image__box">
+                <img src="assets/dist/images/index-berita/berita-terkini/3.jpeg" alt="">
+            </div>
+        </div>
+        <div class="sorot-title">
+            <div class="sorot-title__box">
+                <h1>Kementerian PUPR Bangun Jaringan Irigasi Utama Bahuga D.I Komering 6.853 Ha Senilai Rp 590,23 Miliar</h1>
+                <button>Lihat detail berita</button>
+            </div>
+            <div class="sorot-title__box">
+                <h1>Kementerian PUPR Kembali Laksanakan Sertifikasi Kompetensi Bidang Konstruksi Untuk Prajurit TNI Zeni Angkatan Darat</h1>
+                <button>Lihat detail berita</button>
+            </div>
+            <div class="sorot-title__box">
+                <h1>BPPSPAM Dukung Pemda DIY Percepat Pembangunan SPAM Kamijoro </h1>
+                <button>Lihat detail berita</button>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <div class="news-index">
@@ -133,7 +153,6 @@
                             <label class="news-category">Berita PUPR</label>
                             <div class="inline">
                                 <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
-                                <p><img src="assets/dist/images/index-berita/icon/folder.svg" alt=""> Berita Unit Organisasi</p>
                             </div>
                         </div>
                     </a>
@@ -160,7 +179,6 @@
                             <label class="news-category">Berita Ditjen Bina Konstruksi</label>
                             <div class="inline">
                                 <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
-                                <p><img src="assets/dist/images/index-berita/icon/folder.svg" alt=""> Berita Unit Organisasi</p>
                             </div>
                         </div>
                     </a>
@@ -174,7 +192,6 @@
                             <label class="news-category">Berita  BPSDM</label>
                             <div class="inline">
                                 <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
-                                <p><img src="assets/dist/images/index-berita/icon/folder.svg" alt=""> Berita PUPR</p>
                             </div>
                         </div>
                     </a>
@@ -188,7 +205,6 @@
                             <label class="news-category">Berita Ditjen Bina Konstruksi</label>
                             <div class="inline">
                                 <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
-                                <p><img src="assets/dist/images/index-berita/icon/folder.svg" alt=""> Berita Unit Organisasi</p>
                             </div>
                         </div>
                     </a>
@@ -202,7 +218,6 @@
                             <label class="news-category">Berita Ditjen Pembiayaan Infrastruktur Pekerjaan Umum dan Perumahan</label>
                             <div class="inline">
                                 <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
-                                <p><img src="assets/dist/images/index-berita/icon/folder.svg" alt=""> Berita Unit Organisasi</p>
                             </div>
                         </div>
                     </a>

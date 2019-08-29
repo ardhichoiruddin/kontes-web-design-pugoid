@@ -14,10 +14,8 @@ $('.image-pengumaman').slick({
 scrollTop() >= 300
 Should be equal the the height of the header
 ========================================== */
-var x = $('.sorot').height();
-var y = x - 20;
 $(window).scroll(function(){
-    if ($(window).scrollTop() > y) {
+    if ($(window).scrollTop() > 300) {
         $('nav.navbar').addClass('fixed');
     }
     else {
@@ -101,3 +99,24 @@ $('.slider-news').slick({
 	variableWidth: true,
 	arrows: false
   });
+
+  $('.sorot-image').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	fade: true,
+	asNavFor: '.sorot-title',
+	dots: true,
+  });
+  
+  $('.sorot-title').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	asNavFor: '.sorot-image',
+	dots: false,
+	centerMode: true,
+	focusOnSelect: true,
+	fade: true,
+	arrows: false,
+  });
+		  

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pu</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="assets/dist/css/slick.css">
     <link rel="stylesheet" href="assets/dist/css/main.css">
 </head>
 <body>
@@ -122,9 +122,8 @@
     ?>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="assets/dist/js/siema.min.js"></script>
+    <script src="assets/dist/js/jquery.min.js"></script>
+    <script src="assets/dist/js/slick.min.js"></script>
     <script src="assets/dist/js/main.js"></script>
 </body>
 </html>

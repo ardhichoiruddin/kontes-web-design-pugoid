@@ -103,7 +103,7 @@ body {
     background-color: #364878;
     color: #fff; }
   .btn-secondary {
-    background-color: #282b33;
+    background-color: #1c1d20;
     color: #fff; }
   .btn-success {
     background-color: #FF4E16;
@@ -387,7 +387,7 @@ body {
         line-height: 1.5;
         font-weight: 700; }
         .berita-terikini-front .slider-news .news-box h4 a {
-          color: #282b33; }
+          color: #1c1d20; }
       .berita-terikini-front .slider-news .news-box span {
         font-size: 0.75rem;
         color: #525252;
@@ -401,47 +401,80 @@ body {
       .berita-terikini-front .slider-news .news-box > div {
         width: 100%; }
 
+h1.head-title-first {
+  font-size: 1.438rem;
+  max-width: 500px;
+  line-height: 1.4;
+  font-family: "PT Sans", sans-serif;
+  color: #1c1d20;
+  margin-top: 1.6rem; }
+
 .sorot {
-  background-color: #364878; }
-  .sorot .sorot-title {
-    -webkit-flex-basis: 40%;
-        -ms-flex-preferred-size: 40%;
-            flex-basis: 40%;
-    margin-left: auto; }
-    .sorot .sorot-title h1 {
-      font-size: 2.34rem;
-      font-family: "PT Sans", sans-serif;
+  margin-top: 2rem; }
+  .sorot::after {
+    display: block;
+    content: "";
+    clear: both; }
+  .sorot-image {
+    position: relative;
+    float: left;
+    width: 40%; }
+    .sorot-image__box img {
+      width: 100%;
+      height: 320px;
+      -o-object-fit: cover;
+         object-fit: cover; }
+    .sorot-image .slick-dots {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 8px;
+      margin-bottom: 0; }
+      .sorot-image .slick-dots li button {
+        font-size: 0;
+        width: 12px;
+        height: 12px;
+        padding: 0.5rem;
+        -webkit-border-radius: 50%;
+           -moz-border-radius: 50%;
+                border-radius: 50%;
+        border: none;
+        background-color: #C4C4C4; }
+      .sorot-image .slick-dots li.slick-active button {
+        background-color: #364878; }
+      .sorot-image .slick-dots li:nth-child(n+2) {
+        margin-left: 1rem; }
+  .sorot-title {
+    position: relative;
+    float: left;
+    width: 55%;
+    margin-left: 1rem; }
+    .sorot-title__box h1 {
+      font-size: 1.688rem;
       font-weight: 900;
-      color: #fff;
-      line-height: 1.5;
-      letter-spacing: 0.009em;
-      margin-top: 3.9rem; }
-    .sorot .sorot-title button {
-      padding: 0.6rem 1.1rem;
-      background-color: transparent;
-      border: solid 1px #fff;
-      -webkit-border-radius: 5px;
-         -moz-border-radius: 5px;
-              border-radius: 5px;
-      font-size: 1rem;
-      font-family: "Lato", sans-serif;
+      line-height: 1.4;
+      color: #1c1d20; }
+    .sorot-title__box button {
+      border: solid 1px #FF4E16;
+      padding: 0.75rem 1.3rem;
+      font-size: 0.9rem;
+      background-color: #FF4E16;
       font-weight: 600;
       color: #fff;
-      margin-top: 1.5rem;
-      line-height: 1.5;
-      cursor: pointer; }
-      .sorot .sorot-title button:hover, .sorot .sorot-title button:focus {
-        background-color: #FF4E16; }
-  .sorot .sorot-image {
-    -webkit-flex-basis: 55%;
-        -ms-flex-preferred-size: 55%;
-            flex-basis: 55%; }
-    .sorot .sorot-image img {
-      width: 100%;
-      height: 390px;
-      -o-object-fit: cover;
-         object-fit: cover;
-      opacity: 0.95; }
+      -webkit-border-radius: 3px;
+         -moz-border-radius: 3px;
+              border-radius: 3px;
+      cursor: pointer;
+      margin-top: 2rem; }
 
 .news-index__wrapper {
   display: -webkit-box;
@@ -487,7 +520,7 @@ body {
             font-size: 0.8rem;
             font-weight: 900;
             line-height: 1.7;
-            color: #282b33;
+            color: #1c1d20;
             letter-spacing: 0.005em;
             margin-bottom: 0.25rem; }
           .news-index__wrapper .news-left .news-terpopuler .media .media-body .news-category {
@@ -539,7 +572,7 @@ body {
         font-size: 0.9rem;
         font-weight: 900;
         line-height: 1.4;
-        color: #282b33;
+        color: #1c1d20;
         letter-spacing: 0.005em;
         margin-top: 0.3rem; }
   .news-index__wrapper .news-right {
@@ -584,7 +617,7 @@ body {
             font-size: 1rem;
             font-weight: 900;
             line-height: 1.5;
-            color: #282b33; }
+            color: #1c1d20; }
           .news-index__wrapper .news-right .news-terkini .media .media-body .excerpt {
             font-size: 0.8rem;
             line-height: 1.5;
@@ -604,7 +637,7 @@ body {
             .news-index__wrapper .news-right .news-terkini .media .media-body .inline p {
               font-size: 0.66rem;
               display: inline;
-              color: #282b33; }
+              color: #1c1d20; }
               .news-index__wrapper .news-right .news-terkini .media .media-body .inline p img {
                 width: 0.6rem; }
               .news-index__wrapper .news-right .news-terkini .media .media-body .inline p:nth-child(2) img {
@@ -760,7 +793,7 @@ body {
       .news-index .part-pengumuman__wrapper .news-pengumuman-right .image-pengumaman .slick-dots li {
         display: inline; }
         .news-index .part-pengumuman__wrapper .news-pengumuman-right .image-pengumaman .slick-dots li.slick-active button {
-          background-color: #282b33; }
+          background-color: #1c1d20; }
         .news-index .part-pengumuman__wrapper .news-pengumuman-right .image-pengumaman .slick-dots li:nth-child(n+2) {
           margin-left: 0.75rem; }
       .news-index .part-pengumuman__wrapper .news-pengumuman-right .image-pengumaman .slick-dots button {
@@ -891,7 +924,7 @@ body {
        -moz-box-shadow: 0px 5px 52px -25px rgba(0, 0, 0, 0.14);
             box-shadow: 0px 5px 52px -25px rgba(0, 0, 0, 0.14); }
     .detail-berita__header h1 {
-      color: #282b33;
+      color: #1c1d20;
       font-size: 1.4rem;
       line-height: 1.4;
       font-weight: 900; }
@@ -902,7 +935,7 @@ body {
     .detail-berita__body .image-article {
       width: 100%; }
     .detail-berita__body p {
-      color: #282b33;
+      color: #1c1d20;
       font-size: 1rem;
       line-height: 1.5; }
       .detail-berita__body p:nth-child(1) {
