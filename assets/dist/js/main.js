@@ -91,13 +91,18 @@ $('.slider-nav-image').slick({
 
 $('.slider-news').slick({
 	dots: false,
-	infinite: true,
+	infinite: false,
 	speed: 300,
 	slidesToShow: 4,
 	slidesToScroll: 4,
 	centerMode: false,
 	variableWidth: true,
-	arrows: false
+	arrows: false,
+	onAfterChange: function(slide, index){
+		if($('.slick-slide:nth-last-child(1)')){
+			$('.pages .slider').slickPause();
+		}
+	}
   });
 
   $('.sorot-image').slick({
