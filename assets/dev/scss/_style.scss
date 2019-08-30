@@ -1,5 +1,23 @@
 
 
+@mixin custom-dekstop-device{
+    @media only screen and (max-width: 1032px){
+        @content;
+    }
+}
+
+@mixin custom-tablet-device{
+    @media (min-width: 700px) and (min-height: 1010px){
+        @content;
+    }
+}
+
+@mixin custom-tablet-device-lg{
+    @media (min-width: 1000px) and (min-height: 1278px){
+        @content;
+    }
+}
+
 .navbar{
 
     background-color: #fff;
@@ -7,6 +25,13 @@
     width: 100%;
 
     padding: 1rem 0;
+
+    @include custom-dekstop-device{
+        > div.d-flex{
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
 
     &.fixed{
         position: fixed;
@@ -28,22 +53,66 @@
     }
 
     .navbar-menu{
+
+        position: relative;
+
+        @include custom-dekstop-device{
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            background-color: #fff;
+            top: 100px;
+            bottom: 0;
+            display: none;
+        }
+
         ul{
             display: inline;
             padding-left: 0 !important;
+
+            @include custom-dekstop-device{
+                width: 70%;
+            }
+
             li{
                 position: relative;
                 display: inline;
                 font-weight: 700;
 
+                @include custom-dekstop-device{
+                    display: block;
+                }
+
                 a{
                     color: #232323;
                     font-size: 0.9rem !important;
+
+                    @include custom-dekstop-device{
+                        width: 100%;
+                        font-size: 1rem !important;
+                    }
+
+                    img{
+                        width: 14px;
+                        height: 12px;
+                        vertical-align: middle;
+                        margin-left: 5px;
+                        display: none;
+
+                        @include custom-dekstop-device{
+                            display: inline;
+                        }
+                    }
 
                 }
                 
                 &:not(:nth-child(1)){
                     margin-left: 1rem;
+
+                    @include custom-dekstop-device{
+                        margin-left: 0;
+                        margin-top: 1rem;
+                    }
                 }
 
                 .dropdown{
@@ -61,6 +130,15 @@
                     left: -15px;
                     top: 17px;
                     animation: dropdown-animation 310ms ease-out;
+
+                    @include custom-dekstop-device{
+                        position: relative;
+                        display: block;
+                        top: 0;
+                        padding: 0.25rem 0.5rem;
+                        margin-left: 1.3rem;
+                        box-shadow: none;
+                    }
 
                     @keyframes dropdown-animation{
                         from{
@@ -113,9 +191,14 @@
 
                 .btn.pengaduan{
                     border: #232323 1px solid;
+
+                    @include custom-dekstop-device{
+                        display: none;
+                    }
                 }
             }
         }
+
 
     }
 
@@ -128,14 +211,54 @@
 
 .home-content{
 
+    @include custom-tablet-device{
+         div.d-flex{
+            flex-direction: column-reverse;
+        }
+    }
+
+    @include respond-to(tablet){
+        div.d-flex{
+            flex-direction: column-reverse;
+        }
+    }
+
     picture{
         position: relative;
         flex-basis: 43%;
 
+        @include custom-tablet-device{
+            flex-basis: 80%;
+        }
+
         img{
-            width: 355px;
+            width: 335px;
             margin-top: 2rem;
             margin-left: 4rem;
+
+            @include respond-to(mobile){
+                width: 280px;
+                margin-left: 0;
+            }
+
+            @include respond-to(tablet){
+                margin-top: 0;
+            }
+
+            @include respond-to(dekstop){
+                width: 320px;
+            }
+
+            
+            @include custom-tablet-device{
+                margin-left: 1rem;
+                width: 450px !important;
+                margin-top: 1rem;
+            }
+
+            @include custom-tablet-device-lg{
+                width: 530px !important;
+            }
         }
     }
 
@@ -145,6 +268,27 @@
         margin-top: 4.1rem;
 
 
+        @include respond-to(tablet){
+            margin-top: 2rem;
+        }
+
+        @include custom-tablet-device{
+            margin-top: 2rem;
+        }
+
+        @include respond-to(dekstop){
+            margin-left: 1rem;
+        }
+
+        @include custom-tablet-device-lg{
+            margin-top: 3rem;
+        }
+
+        @include respond-to(mobile){
+            margin-top: 1rem;
+            margin-left: 0;
+        }
+
         h1{
             font-size: 2.34rem;
             font-family: $primary-fonts;
@@ -152,6 +296,20 @@
             color: $primary-color;
             line-height: 1.4;
             letter-spacing: 0.009em;
+
+            @include respond-to(mobile){
+                font-size: 1.6rem;
+            }
+
+            @include custom-tablet-device{
+                font-size: 2.1rem;
+            }
+
+            @include respond-to(dekstop){
+                font-size: 1.8rem;
+            }
+
+          
         }
     }
 
@@ -162,9 +320,45 @@
             font-size: 0.95rem;
             font-weight: 700;
 
+            @include custom-tablet-device{
+                display: none;
+            }
+
+            @include respond-to(tablet){
+                display: none;
+            }
+
             &:not(:nth-child(1)){
                 margin-left: 4px;
             }
+        }
+
+        &--mobile{
+            display: none;
+
+            @include respond-to(tablet){
+                display: none;
+                margin-top: 2rem;
+            }
+
+            @include respond-to(tablet){
+                display: block;
+            }
+
+            @include custom-tablet-device{
+                display: block;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+            }
+
+            a{
+                @include respond-to(tablet){
+                    font-size: 0.8rem;
+                    padding: 0.56rem 0.75rem;
+                }
+            }
+
+            
         }
     }
 
@@ -172,23 +366,70 @@
 
 .berita-terikini-front{
 
-    margin-top: 2rem;
+    margin-top: 1rem;
+
+    @include respond-to(tablet){
+        margin-top: 2rem;
+    }
+
+    .lihat-semua-berita-front{
+        display: inline;
+        font-size: 0.75rem;
+        margin-left: 7px;
+    }
+
+    .btn-next-prev{
+        button{
+            padding: 0.3rem 0.8rem;
+            background-color: $primary-color;
+            border: solid 1px $primary-color;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+
+            &:nth-child(2){
+                margin-left: 6px;
+            }
+
+            @include custom-tablet-device-lg{
+                font-size: 1.188rem;
+            }
+        }
+    }
+
+    .slick-disabled {
+        visibility: collapse;
+        pointer-events:none;
+        transition: all 300ms ease;
+    }
 
     .title-news-box{
         font-size: 1rem;
         font-weight: 900;
+        display: inline;
     }
 
     .slider-news{
 
         list-style: none;
         margin-top: 0;
-    
+        
+        @include custom-tablet-device-lg{
+            margin-top: 2rem;
+        }
     
         .news-box{
     
             width: 310px;
             padding: 1rem;
+
+            @include custom-tablet-device{
+                width: 280px;
+            }
+
+            @include custom-tablet-device-lg{
+                width: 360px;
+            }
 
             img.img-front{
                 width: 60px;
@@ -197,16 +438,31 @@
                 margin-right: 8px;
                 border-radius: 3px;
                 opacity: 0.9;
+
+                @include custom-tablet-device{
+                    width: 100px;
+                    height: 100px;
+                }
+
+                @include custom-tablet-device-lg{
+                    width: 140px;
+                    height: 140px;
+                }
             }
         
             h4{
                 font-size: 0.938rem;
                 line-height: 1.5;
                 font-weight: 700;
+
+                @include custom-tablet-device-lg{
+                    font-size: 1.1rem;
+                }
         
                 a{
                     color: $secondary-color;
                 }
+                
             }
         
             span{
@@ -224,6 +480,16 @@
 
                 span{
                     display: inline;
+                }
+            }
+
+            &.button-plus{
+                button{
+                    padding: 1rem;
+                    border-radius: 50%;
+                    border: dashed 2px $secondary-color;
+                    background-color: transparent;
+                    cursor: pointer;
                 }
             }
 

@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="?page=home">Beranda</a></li>
                 <li>
-                    <a href="">Profil</a>
+                    <a href="">Profil <img src="assets/dist/images/index-berita/icon/arrow-down.svg" alt=""></a>
                     <div class="dropdown">
                         <ul>
                             <li><a href="?page=berita-detail">Visi dan Misi</a></li>
