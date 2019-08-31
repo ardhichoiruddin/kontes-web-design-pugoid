@@ -97,14 +97,11 @@
                 <div class="news-video">
                     <h2 class="news-title">Berita Video</h2>
                     <div class="news-video__box">
-                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/MSI3KSo9DjM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/qRtIt_eaYfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h3>Revitalisasi Tempat Pemrosesan Akhir Sampah di Bali</h3>
-                        <label class="news-category">Berita Ditjen Bina Konstruksi</label>
                     </div>
                     <div class="news-video__box">
-                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/MSI3KSo9DjM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h3>Revitalisasi Tempat Pemrosesan Akhir Sampah di Bali</h3>
-                        <label class="news-category">Berita Ditjen Bina Konstruksi</label>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/R3ML-kLTsIs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <button class="see-all">Lihat semua berita video</button>
                 </div>
