@@ -6,28 +6,33 @@
         
         <div class="sorot-image">
             <div class="sorot-image__box">
-                <img src="assets/dist/images/index-berita/berita-terkini/5.jpeg" alt="">
+                <img src="assets/dist/images/index-berita/sorot/1.png" alt="">
             </div>
             <div class="sorot-image__box">
-                <img src="assets/dist/images/index-berita/berita-terkini/4.jpg" alt="">
+                <img src="assets/dist/images/index-berita/sorot/2.png" alt="">
             </div>
             <div class="sorot-image__box">
-                <img src="assets/dist/images/index-berita/berita-terkini/3.jpeg" alt="">
+                <img src="assets/dist/images/index-berita/sorot/3.png" alt="">
             </div>
         </div>
         <div class="sorot-title">
             <div class="sorot-title__box">
-                <h1>Kementerian PUPR Bangun Jaringan Irigasi Utama Bahuga D.I Komering 6.853 Ha Senilai Rp 590,23 Miliar</h1>
+                <h1>" Peringatan HUT Ke-74 Kemerdekaan Republik lndonesia Tahun 2019"</h1>
                 <button>Lihat detail berita</button>
             </div>
             <div class="sorot-title__box">
-                <h1>Kementerian PUPR Kembali Laksanakan Sertifikasi Kompetensi Bidang Konstruksi Untuk Prajurit TNI Zeni Angkatan Darat</h1>
+                <h1>" Kontes Desain Portal Web Kementerian PUPR"</h1>
                 <button>Lihat detail berita</button>
             </div>
             <div class="sorot-title__box">
-                <h1>BPPSPAM Dukung Pemda DIY Percepat Pembangunan SPAM Kamijoro </h1>
+                <h1>" ICID.CIID - 3rd World Irrigation Forum & 70th International Executive Council Meeting 1-7 September 2019"</h1>
                 <button>Lihat detail berita</button>
             </div>
+        </div>
+
+        <div class="sorot-btn-arrow">
+            <button class="sorot-arrow-left"><img src="assets/dist/images/index-berita/icon/arrow-left.svg" alt=""></button>
+            <button class="sorot-arrow-right"><img src="assets/dist/images/index-berita/icon/arrow-right.svg" alt=""></button>
         </div>
 
     </div>
@@ -94,10 +99,12 @@
                     <div class="news-video__box">
                         <iframe width="100%" height="200" src="https://www.youtube.com/embed/MSI3KSo9DjM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h3>Revitalisasi Tempat Pemrosesan Akhir Sampah di Bali</h3>
+                        <label class="news-category">Berita Ditjen Bina Konstruksi</label>
                     </div>
                     <div class="news-video__box">
                         <iframe width="100%" height="200" src="https://www.youtube.com/embed/MSI3KSo9DjM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h3>Revitalisasi Tempat Pemrosesan Akhir Sampah di Bali</h3>
+                        <label class="news-category">Berita Ditjen Bina Konstruksi</label>
                     </div>
                     <button class="see-all">Lihat semua berita video</button>
                 </div>
@@ -107,35 +114,35 @@
                     <h2 class="news-title">Berita Terkini</h2>
 
                     <div class="news-terkini__select">
-                        <ul>
-                            <li class="active">
+                        <ul class="drp">
+                            <li class="drp-inner active">
                                 <a href="">Semua Berita</a>
                             </li>
-                            <li>
+                            <li class="drp-inner">
                                 <a href="">Berita PUPR</a>
                             </li>
-                            <li>
-                                <a href="">Berita Unit Organisasi <img src="assets/dist/images/index-berita/icon/arrow-down.svg" alt=""></a>
+                            <li class="drp-inner">
+                                <input type="checkbox">
+                                <a>Berita Unit Organisasi <img src="assets/dist/images/index-berita/icon/arrow-down.svg" alt=""></a>
 
                                 <div class="dropdown d-flex">
                                     <div class="dropdown__wrapper">
                                         <ol>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Seketariat Jendral</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Instopekrat Jendral</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Ditjen Sumber Daya Air</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Ditjen Bina Marga</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Ditjen Cipta Karya</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Ditjen Penyediaan Perumahan</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Ditjen Bina Konstruksi</a></li>
+                                            <li><a href="">Seketariat Jendral</a></li>
+                                            <li><a href="">Instopekrat Jendral</a></li>
+                                            <li><a href="">Ditjen Sumber Daya Air</a></li>
+                                            <li><a href="">Ditjen Bina Marga</a></li>
+                                            <li><a href="">Ditjen Cipta Karya</a></li>
+                                            <li><a href="">Ditjen Penyediaan Perumahan</a></li>
+                                            <li><a href="">Ditjen Bina Konstruksi</a></li>
                                         </ol>
                                         <ol>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Seketariat Jendral</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Instopekrat Jendral</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Ditjen Sumber Daya Air</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Ditjen Bina Marga</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Ditjen Cipta Karya</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Ditjen Penyediaan Perumahan</a></li>
-                                            <li><img src="assets/dist/images/index-berita/icon/star.svg" alt=""> <a href="">Ditjen Bina Konstruksi</a></li>
+                                            <li><a href="">Ditjen Pembiayaan Infrastruktur Pekerjaan Umum dan Perumahan</a></li>
+                                            <li><a href="">BPIW</a></li>
+                                            <li><a href="">Balitbang</a></li>
+                                            <li><a href="">BPSDM</a></li>
+                                            <li><a href="">BPJT</a></li>
+                                            <li><a href="">BPPSPAM</a></li>
                                         </ol>
                                     </div>
                                 </div>
@@ -145,79 +152,79 @@
 
                     <a href="#" class="media js-cd-panel-trigger" data-panel="main">
                         <div class="media-image-wrapper">
-                            <img src="assets/dist/images/index-berita/berita-terkini/5.jpeg" alt="" class="media-image top">
+                            <img src="assets/dist/images/index-berita/berita-terkini/1.jpg" alt="" class="media-image top">
                         </div>
                         <div class="media-body top">
-                            <h3 class="media-title m-0">Konstruksi Infrastruktur Dasar Ibu Kota Negara di Kalimantan Timur Dimulai Pertengahan 2020 </h3>
-                            <p class="excerpt">Hadir dalam acara tersebut Menteri Pekerjaan Umum dan Perumahan Rakyat (PUPR) Basuki Hadimuljono, Menteri ATR Sofyan Djalil, Menteri PPN/Kepala Bappenas Bambang Brodjonegoro</p>
+                            <h3 class="media-title m-0">Utusan Khusus Presiden RI Hadiri Peresmian Jembatan B.J. Habibie di Dili, Timor Leste</h3>
+                            <p class="excerpt">Hadimuljono sebagai Utusan Khusus Presiden RI untuk menghadiri Peringatan ke-20 Hari Pelaksanaan Jajak Pendapat di Dili, Timor Leste. Dalam kesempatan tersebut, pada tanggal 29 Agustus 2019 ...</p>
                             <label class="news-category">Berita PUPR</label>
                             <div class="inline">
-                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
+                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 30 Agustus 2019</p>
                             </div>
                         </div>
                     </a>
-                    <a href="" class="media">
-                        <div class="media-image-wrapper">
-                            <img src="assets/dist/images/index-berita/berita-terkini/1.jpeg" alt="" class="media-image top">
-                        </div>
-                        <div class="media-body top">
-                            <h3 class="media-title m-0">Meriahkan Hari Perumahan Nasional 2019, Kementerian PUPR Ajak Asosiasi Pengembang dan Perbankan Jalan Sehat</h3>
-                            <p class="excerpt">Permukiman dan Perumahan Rakyat (Himppera) menggelar acara Jalan Sehat dalam rangka memeriahkan peringatan Hapernas Tahun 2019. Hapernas menjadi </p>
-                            <label class="news-category">Berita Ditjen Sumber Daya Air</label>
-                            <div class="inline">
-                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="" class="media">
+                    <a href="#" class="media js-cd-panel-trigger" data-panel="main">
                         <div class="media-image-wrapper">
                             <img src="assets/dist/images/index-berita/berita-terkini/2.jpeg" alt="" class="media-image top">
                         </div>
                         <div class="media-body top">
-                            <h3 class="media-title m-0"> Pembangunan Stadion Manahan Solo Rampung 96%</h3>
-                            <p class="excerpt">Kementerian Pekerjaan Umum dan Perumahan Rakyat (PUPR) tengah menyelesaikan pembangunan Stadion Manahan di Kota Solo, Jawa Tengah.</p>
-                            <label class="news-category">Berita Ditjen Bina Konstruksi</label>
+                            <h3 class="media-title m-0">Pagu Anggaran Tahun 2020 Sebesar Rp 120,21 Triliun : Pembangunan Infrastruktur Dasar Permukiman Menjadi Prioritas Kementerian PUPR (Bagian 3)</h3>
+                            <p class="excerpt">Pagu Anggaran Kementerian Pekerjaan Umum dan Perumahan Rakyat (PUPR) tahun 2020 sebesar Rp 120,21 triliun sesuai dengan pidato Presiden RI Joko Widodo atas RUU APBN Tahun Anggaran 2020 beserta ...</p>
+                            <label class="news-category">Berita PUPR</label>
                             <div class="inline">
-                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
+                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 30 Agustus 2019</p>
                             </div>
                         </div>
                     </a>
-                    <a href="" class="media">
+                    <a href="#" class="media js-cd-panel-trigger" data-panel="main">
                         <div class="media-image-wrapper">
-                            <img src="assets/dist/images/index-berita/berita-terkini/3.jpeg" alt="" class="media-image top">
+                            <img src="assets/dist/images/index-berita/berita-terkini/3.jpg" alt="" class="media-image top">
                         </div>
                         <div class="media-body top">
-                            <h3 class="media-title m-0">Perumahan MBR Berbasis Komunitas Skala Besar Terus Didorong </h3>
-                            <p class="excerpt">Kementerian Pekerjaan Umum dan Perumahan Rakyat (PUPR) mengajak Pemerintah Daerah, pengembang perumahan dan perbankan untuk</p>
-                            <label class="news-category">Berita  BPSDM</label>
+                            <h3 class="media-title m-0">Kementerian PUPR Hadir dalam Pembahasan Ketersediaan Peta Tematik Kemaritiman dan Kebencanaan</h3>
+                            <p class="excerpt">Kementerian Pekerjaan Umum dan Perumahan Rakyat (PUPR) tengah menyelesaikan pembangunan Stadion Manahan di Kota Solo, Jawa Tengah.</p>
+                            <label class="news-category">Berita Sekretariat Jenderal</label>
                             <div class="inline">
-                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
+                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 26 Agustus 2019</p>
                             </div>
                         </div>
                     </a>
-                    <a href="" class="media">
+                    <a href="#" class="media js-cd-panel-trigger" data-panel="main">
                         <div class="media-image-wrapper">
                             <img src="assets/dist/images/index-berita/berita-terkini/4.jpg" alt="" class="media-image top">
                         </div>
                         <div class="media-body top">
-                            <h3 class="media-title m-0">Pelantikan Pejabat Pengawas dan Fungsional di Lingkungan Sekretariat Jenderal</h3>
-                            <p class="excerpt">Sekretaris Jenderal Kementerian Pekerjaan Umum dan Perumahan Rakyat (PUPR) Anita Firmanti melantik Pejabat Pengawas dan</p>
-                            <label class="news-category">Berita Ditjen Bina Konstruksi</label>
+                            <h3 class="media-title m-0">Percepatan Tindak Lanjut Rekomendasi Temuan Hasil Pengawasan Itjen PUPR</h3>
+                            <p class="excerpt">Inspektorat Jenderal kembali mengadakan Kegiatan Percepatan Tindak Lanjut Rekomendasi Temuan Hasil Pengawasan Inspektorat Jenderal. Kegiatan ini dilaksanakan </p>
+                            <label class="news-category">Berita Inspektorat Jenderal</label>
                             <div class="inline">
-                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
+                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 23 Agustus 2019</p>
                             </div>
                         </div>
                     </a>
-                    <a href="" class="media">
+                    <a href="#" class="media js-cd-panel-trigger" data-panel="main">
                         <div class="media-image-wrapper">
-                            <img src="assets/dist/images/index-berita/berita-terkini/6.jpg" alt="" class="media-image top">
+                            <img src="assets/dist/images/index-berita/berita-terkini/5.jpg" alt="" class="media-image top">
                         </div>
                         <div class="media-body top">
-                            <h3 class="media-title m-0">Kementerian PUPR Bangun Rusun dan Rusus Petugas Lapas Nusakambangan</h3>
-                            <p class="excerpt"> Kementerian PUPR melalui Direktorat Jenderal Penyediaan Perumahan membangun hunian berupa rumah susun (Rusun) dan rumah khusus (Rusus) bagi para petugas lembaga pemasyarakatan</p>
-                            <label class="news-category">Berita Ditjen Pembiayaan Infrastruktur Pekerjaan Umum dan Perumahan</label>
+                            <h3 class="media-title m-0">Semangat Membentuk Unit Kerja Zona Integritas Baru</h3>
+                            <p class="excerpt">Semangat untuk membentuk budaya integritas melalui pembangunan Zona Integritas (ZI) menuju WBK di Kementerian PUPR terus bergelora. Kali ini Pusat Penelitian dan</p>
+                            <label class="news-category">Berita Inspektorat Jenderal</label>
                             <div class="inline">
-                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 7 September 2019</p>
+                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 24 Juli 2019</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="media js-cd-panel-trigger" data-panel="main">
+                        <div class="media-image-wrapper">
+                            <img src="assets/dist/images/index-berita/berita-terkini/6.png" alt="" class="media-image top">
+                        </div>
+                        <div class="media-body top">
+                            <h3 class="media-title m-0">PISEW Buka Akses Distribusi Perkebunan Warga Pinang Raya Bengkulu</h3>
+                            <p class="excerpt">Sebagai upaya dalam pengentasan kesenjangan antar wilayah, Direktorat Jenderal Cipta Karya melakukan program pengembangan infrastruktur di kawasan khusus. Salah satunya </p>
+                            <label class="news-category">Berita Ditjen Cipta Karya</label>
+                            <div class="inline">
+                                <p><img src="assets/dist/images/index-berita/icon/clock.svg" alt=""> 3 Juli 2019</p>
                             </div>
                         </div>
                     </a>

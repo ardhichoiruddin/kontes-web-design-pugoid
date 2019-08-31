@@ -118,6 +118,15 @@ $('.slider-news').slick({
 		infinite: false,
 		dots: false
 		}
+	},
+	{
+		breakpoint: 576,
+		settings: {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: false,
+		dots: false
+		}
 	}],
 	onAfterChange: function(slide, index){
 		if($('.slick-slide:nth-last-child(1)')){
@@ -132,7 +141,9 @@ $('.slider-news').slick({
   $('.sorot-image').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
-	arrows: false,
+	arrows: true,
+	nextArrow: $('.sorot-arrow-right'),
+	prevArrow: $('.sorot-arrow-left'),
 	fade: true,
 	asNavFor: '.sorot-title',
 	dots: true,

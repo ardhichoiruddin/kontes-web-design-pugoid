@@ -18,6 +18,20 @@
     }
 }
 
+body{
+    animation: body-animate 500ms ease-out;
+}
+
+@keyframes body-animate{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
 .navbar{
 
     background-color: #fff;
@@ -52,6 +66,96 @@
         }
     }
 
+    .toggle-wrapper{
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        display: none;
+
+        @include custom-dekstop-device{
+            display: block;
+        }
+    }
+
+    .toggle-checkbox{
+        position: absolute;
+        top: 1rem;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        z-index: 1300;
+        opacity: 0;
+        display: none;
+
+        &:checked{
+            ~ .toggle-wrapper{
+                .toggle:before {
+                    transform: rotate(45deg) translateX(7px) translateY(18px);
+                }
+            
+                .toggle:after {
+                    box-shadow: none;
+                    transform: rotate(-45deg) translateX(7px) translateY(18px);
+                }
+            }
+
+            ~ .navbar-menu{
+                display: block;
+            }
+
+        }
+
+        @include custom-dekstop-device{
+            display: block;
+        }
+    }
+
+    .toggle,
+    .toggle:before,
+    .toggle:after {
+        display: block;
+        position: absolute;
+        transition: box-shadow .13s ease-in-out .15s, transform .15s ease-in-out;
+    }
+
+    .active .toggle,
+    .active .toggle:before,
+    .active .toggle:after {
+        transition: box-shadow .15s ease-in-out, transform .15s ease-in-out .15s;
+    }
+
+    .toggle {
+        background: rgb(255, 255, 255);
+        height: 40px;
+        right: 15px;
+        width: 40px;
+    }
+
+    .toggle:before {
+        background: $secondary-color;
+        border-radius: 2px;
+        content: ' ';
+        height: 4px;
+        transform: translateX(7px) translateY(18px);
+        transform-origin: 20px 20px;
+        width: 26px;
+    }
+
+    .toggle:after {
+        background: $secondary-color;
+        border-radius: 2px;
+        box-shadow: 0 -8px 0 0 $secondary-color, 0 8px 0 0 $secondary-color;
+        content: ' ';
+        height: 4px;
+        transform: translateX(7px) translateY(18px);
+        transform-origin: 20px 20px;
+        width: 26px;
+    }
+
+
+
     .navbar-menu{
 
         position: relative;
@@ -61,9 +165,13 @@
             width: 100%;
             z-index: 100;
             background-color: #fff;
-            top: 100px;
+            top: 81px;
             bottom: 0;
             display: none;
+            overflow-x: scroll;
+            padding: 1rem;
+            box-sizing: border-box;
+            left: 0;
         }
 
         ul{
@@ -83,9 +191,39 @@
                     display: block;
                 }
 
+                &.active{
+                    a{
+                        color: $success-color;
+                    }
+                }
+
+                .checkbox-mobile-menu[type=checkbox]{
+                    position: absolute;
+                    top: 0;
+                    opacity: 0;
+                    width: 100%;
+                    z-index: 1300;
+
+                    display: none;
+                    &:checked{
+                        ~ a{
+                            color: $success-color;
+                        }
+                        ~ .dropdown{
+                            display: block;
+                        }
+                    }
+
+                    @include custom-dekstop-device{
+                        display: block;
+                    }
+                    
+                }
+
                 a{
                     color: #232323;
                     font-size: 0.9rem !important;
+                    cursor: pointer;
 
                     @include custom-dekstop-device{
                         width: 100%;
@@ -119,7 +257,6 @@
 
                     position: absolute;
                     padding: 1rem;
-                    display: none;
                     background-color: #fff;
                     z-index: 1000;
                     box-shadow: 0px 13px 35px -13px rgba(0,0,0,0.15);
@@ -130,14 +267,18 @@
                     left: -15px;
                     top: 17px;
                     animation: dropdown-animation 310ms ease-out;
+                    display: none;
 
                     @include custom-dekstop-device{
                         position: relative;
-                        display: block;
+                        display: none;
                         top: 0;
-                        padding: 0.25rem 0.5rem;
-                        margin-left: 1.3rem;
+                        padding: 0.25rem 0.7rem;
+                        margin-left: 0rem;
                         box-shadow: none;
+                        animation: none;
+                        left: 0;
+                        width: auto;
                     }
 
                     @keyframes dropdown-animation{
@@ -154,6 +295,10 @@
         
                     ul{
                         list-style: none;
+
+                        // @include custom-dekstop-device{
+                        //     margin-left: 1rem;
+                        // }
         
                         li{
                             display: block;
@@ -164,6 +309,13 @@
                             > a{
                                 &:hover , &:focus{
                                     color: $success-color;
+                                }
+                            }
+
+                            @include custom-dekstop-device{
+                                a{
+                                    font-size: 0.9rem !important;
+                                    line-height: 1.5;
                                 }
                             }
                         }
@@ -186,6 +338,10 @@
                 &:nth-child(n+7){
                     .dropdown{
                         left: -204px;
+
+                        @include custom-dekstop-device{
+                            left: 0px;
+                        }
                     }
                 }
 
@@ -198,7 +354,6 @@
                 }
             }
         }
-
 
     }
 
@@ -225,51 +380,50 @@
 
     picture{
         position: relative;
-        flex-basis: 43%;
+        flex-basis: 50%;
+        margin-top: 2rem;
+        overflow: hidden;
 
         @include custom-tablet-device{
-            flex-basis: 80%;
+            flex-basis: 100%;
         }
 
         img{
-            width: 335px;
+            width: 100%;
             margin-top: 2rem;
-            margin-left: 4rem;
+            animation: image-animate 700ms ease-out;
+        }
 
-            @include respond-to(mobile){
-                width: 280px;
-                margin-left: 0;
+        @keyframes image-animate {
+            from{
+                transform: translateX(100%);
+                opacity: 0;
             }
 
-            @include respond-to(tablet){
-                margin-top: 0;
+            50%{
+                opacity: 0.4;
             }
 
-            @include respond-to(dekstop){
-                width: 320px;
+            60%{
+                opacity: 0.5;
             }
 
-            
-            @include custom-tablet-device{
-                margin-left: 1rem;
-                width: 450px !important;
-                margin-top: 1rem;
-            }
-
-            @include custom-tablet-device-lg{
-                width: 530px !important;
+            to{
+                transform: translateX(0%);
+                opacity: 1;
             }
         }
     }
 
     &__title{
         position: relative;
-        flex-basis: 45%;
+        flex-basis: 50%;
         margin-top: 4.1rem;
+        animation: text-animate 2s ease-out;
 
 
         @include respond-to(tablet){
-            margin-top: 2rem;
+            margin-top: 2.5rem;
         }
 
         @include custom-tablet-device{
@@ -280,53 +434,55 @@
             margin-left: 1rem;
         }
 
-        @include custom-tablet-device-lg{
-            margin-top: 3rem;
-        }
-
         @include respond-to(mobile){
-            margin-top: 1rem;
+            margin-top: 2rem;
             margin-left: 0;
         }
 
         h1{
             font-size: 2.34rem;
             font-family: $primary-fonts;
-            font-weight: 900;
+            font-weight: 500;
             color: $primary-color;
             line-height: 1.4;
             letter-spacing: 0.009em;
 
-            @include respond-to(mobile){
-                font-size: 1.6rem;
-            }
-
             @include custom-tablet-device{
-                font-size: 2.1rem;
+                font-size: 3.1rem;
             }
 
             @include respond-to(dekstop){
                 font-size: 1.8rem;
             }
 
+            @include respond-to(mobile){
+                font-size: 1.3rem;
+            }
+
           
+        }
+    }
+
+    @keyframes text-animate {
+        from{
+            opacity: 0;
+        }
+
+        to{
+            opacity: 1;
         }
     }
 
     &__button{
         margin-top: 2rem;
 
+        @include custom-tablet-device{
+            margin-top: 3rem;
+        }
+
         .btn{
             font-size: 0.95rem;
             font-weight: 700;
-
-            @include custom-tablet-device{
-                display: none;
-            }
-
-            @include respond-to(tablet){
-                display: none;
-            }
 
             &:not(:nth-child(1)){
                 margin-left: 4px;
@@ -366,10 +522,18 @@
 
 .berita-terikini-front{
 
-    margin-top: 1rem;
+    margin-top: 5rem;
 
     @include respond-to(tablet){
         margin-top: 2rem;
+    }
+
+    @include custom-tablet-device{
+        margin-top: 5rem;
+    }
+
+    @include respond-to(mobile){
+        margin-top: 5.5rem;
     }
 
     .lihat-semua-berita-front{
@@ -394,6 +558,26 @@
             @include custom-tablet-device-lg{
                 font-size: 1.188rem;
             }
+            
+
+            @include respond-to(mobile){
+
+                .btn-dekstop{
+                    display: none;
+                }
+
+            }
+
+            img{
+                width: 15px;
+                vertical-align: middle;
+                display: none;
+
+                @include respond-to(mobile){
+                    display: block;
+                }
+
+            }
         }
     }
 
@@ -412,10 +596,31 @@
     .slider-news{
 
         list-style: none;
-        margin-top: 0;
+        margin-top: 1rem;
+
+        @include custom-tablet-device{
+            margin-top: 0.5rem;
+        }
         
         @include custom-tablet-device-lg{
             margin-top: 2rem;
+        }
+
+        @include respond-to(mobile){
+            padding-left: 0;
+        }
+
+        .slick-slide{
+        
+            &:nth-last-child(1){
+                li{
+
+                    width: 120px;
+                    .news-box{
+                        width: 100%;
+                    }
+                }
+            }
         }
     
         .news-box{
@@ -509,10 +714,15 @@ h1.head-title-first{
     font-family: $primary-fonts;
     color: $secondary-color;
     margin-top: 1.6rem;
+
+    @include respond-to(mobile){
+        font-size: 1rem;
+    }
 }
 
 .sorot{
 
+    position: relative;
     margin-top: 2rem;
 
     &::after {
@@ -525,6 +735,10 @@ h1.head-title-first{
         position: relative;
         float: left;
         width: 40%;
+
+        @include respond-to(tablet){
+            width: 100%;
+        }
 
         &__box{
             img{
@@ -573,6 +787,11 @@ h1.head-title-first{
         width: 55%;
         margin-left: 1rem;
 
+        @include respond-to(tablet){
+            width: 100%;
+            margin-left: 0;
+        }
+
         &__box{
 
             h1{
@@ -580,6 +799,16 @@ h1.head-title-first{
                 font-weight: 900;
                 line-height: 1.4;
                 color: $secondary-color;
+
+                @include respond-to(tablet){
+                    margin-top: 1.3rem;
+                }
+
+                @include respond-to(mobile){
+                    font-size: 1.1rem;
+                    margin-top: 1rem;
+                    line-height: 1.5;
+                }
             }
 
             button{
@@ -592,10 +821,36 @@ h1.head-title-first{
                 border-radius: 3px;
                 cursor: pointer;
                 margin-top: 2rem;
+
+                @include respond-to(mobile){
+                    margin-top: 1.2rem;
+                    padding: 0.5rem 1rem;
+                    font-size: 0.7rem;
+                }
             }
 
         }
 
+    }
+
+    .sorot-btn-arrow{
+
+        position: absolute;
+        right: 0;
+        bottom: 2rem;
+
+        button{
+
+            border: solid 1px $primary-color;
+            background-color: $primary-color;
+            padding: 0.35rem;
+            border-radius: 3px;
+
+            img{
+                width: 14px;
+                vertical-align: middle;
+            }
+        }
     }
 
 }
@@ -606,6 +861,18 @@ h1.head-title-first{
     &__wrapper{
 
         display: flex;
+
+        @include respond-to(tablet){
+            flex-direction: column-reverse;
+        }
+
+        @include custom-tablet-device{
+            flex-direction: column-reverse;
+        }
+
+        @include custom-tablet-device-lg{
+            flex-direction: column-reverse;
+        }
 
         .news-left{
 
@@ -641,6 +908,14 @@ h1.head-title-first{
                             object-fit: cover;
                             border-radius: 3px;
                             opacity: 0.9;
+
+                            @include custom-tablet-device-lg{
+                                height: 130px;
+                            }
+
+                            @include custom-tablet-device{
+                                height: 130px;
+                            }
                         }
                     }
     
@@ -744,6 +1019,12 @@ h1.head-title-first{
 
                 }
 
+                .news-category{
+                    font-size: 0.813rem;
+                    font-weight: 400;
+                    color: $success-color;
+                }
+
                 
             }
            
@@ -753,6 +1034,10 @@ h1.head-title-first{
             position: relative;
             flex-basis: 67%;
             padding: 0.5rem;
+
+            @include respond-to(mobile){
+                padding: 0;
+            }
 
             .news-terkini{
 
@@ -765,6 +1050,10 @@ h1.head-title-first{
                 }
 
                 .media{
+
+                    @include respond-to(mobile){
+                        flex-direction: column;
+                    }
 
                     border: none;
 
@@ -787,6 +1076,10 @@ h1.head-title-first{
     
                     .media-image-wrapper{
                         flex-basis: 23%;
+
+                        @include respond-to(mobile){
+                            flex-basis: 100%;
+                        }
     
                         .media-image{
                             width: 100%;
@@ -794,12 +1087,20 @@ h1.head-title-first{
                             object-fit: cover;
                             border-radius: 3px;
                             opacity: 0.9;
+
+                            @include respond-to(mobile){
+                                height: 120px;
+                            }
                         }
                     }
     
                     .media-body{
-                        flex-basis: 75%;
+                        flex-basis: 100%;
                         padding: 0 0.5rem;
+
+                        @include respond-to(mobile){
+                            flex-basis: 55%;
+                        }
     
                         h3{
                             font-size: 1rem;
@@ -894,12 +1195,71 @@ h1.head-title-first{
                     width: 100%;
                     padding: 0.09rem 0 0.3rem 0;
 
-                    ul {
+                    ul.drp {
                         padding-left: 0;
 
-                        > li{
+                        > li.drp-inner{
 
                             display: inline;
+
+                            @include respond-to(mobile){
+
+                                &:nth-last-child(1){
+                                    position: relative;
+                                    display: block;
+                                    margin-left: 0 !important;
+                                    margin-top: 2rem;
+                                    width: 100%;
+
+                                    a{
+                                        display: block;
+                                        text-align: center;
+                                    }
+
+                                }
+                            }
+
+                            &:nth-last-child(1){
+                                input{
+
+                                    display: none;
+                                    cursor: pointer;
+
+                                    @include respond-to(tablet){
+                                        display: block;
+                                    }
+
+                                    @include custom-tablet-device{
+                                        display: block;
+                                    }
+
+                                    @include custom-tablet-device-lg{
+                                        display: block;
+                                    }
+
+                                    &[type=checkbox]{
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 44px;
+                                        margin: 0;
+                                        top: 0;
+                                        opacity: 0;
+                                       
+
+                                        &:checked{
+
+                                            ~ a{
+                                                background-color: $primary-color;
+                                                color: #fff;
+                                            }
+
+                                            ~ .dropdown{
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
 
                             > a{
                                 padding: 0.7rem 1.5rem;
@@ -907,12 +1267,18 @@ h1.head-title-first{
                                 color: $primary-color;
                                 border: solid 2px $primary-color;
                                 border-radius: 3px;
+                                cursor: pointer;
 
                                 > img{
                                     width: 12px;
                                     padding-top: 5px;
                                     vertical-align: -2px;
                                     margin-left: 4px;
+                                }
+
+                                @include respond-to(mobile){
+                                    padding: 0.5rem 1rem;
+                                    font-size: 0.875rem;
                                 }
                                 
                             }
@@ -926,24 +1292,39 @@ h1.head-title-first{
                                 z-index: 1000;
                                 padding: 1.5rem;
                                 box-shadow: 0px 13px 35px -13px rgba(0,0,0,0.15);
-                                top: 3.4rem;
+                                top: 3.1rem;
+                                box-sizing: border-box;
                                 display: none;
+                                animation: fadeInDown 300ms ease;
+
+                                @include respond-to(mobile){
+                                    top: 3.1rem;
+                                }
 
                                 &__wrapper{
 
                                     display: flex;
-                                    align-items: flex-start;
+
+                                    @include respond-to(mobile){
+                                        flex-direction: column;
+                                    }
 
                                     ol{
-                                        padding-left: 0;
-                                        list-style-type: circle;
+                                        padding-left: 1rem;
+                                        list-style-image: url(../images/index-berita/icon/star.svg) !important;
+
+                                        @include respond-to(mobile){
+                                            padding-left: 0;
+                                        }
+
                                         li{
-                                            display: block;
                                             line-height: 1.9;
                                             font-size: 0.9rem;
+                                            text-align: left !important;
 
                                             a{
                                                 color: $primary-color;
+                                                text-align: left !important;
 
                                                 &:hover, &:focus{
                                                     color: $success-color;
@@ -955,7 +1336,23 @@ h1.head-title-first{
     
                                         &:nth-child(n+2){
                                             margin-left: 3rem;
+
+                                            @include respond-to(mobile){
+                                                margin-left: 0;
+                                            }
                                         }
+                                    }
+                                }
+
+                                @keyframes fadeInDown {
+                                    from {
+                                      opacity: 0;
+                                      transform: translate3d(0, 40px, 0);
+                                    }
+                                  
+                                    to {
+                                      opacity: 1;
+                                      transform: translate3d(0, 0, 0);
                                     }
                                 }
 
@@ -1005,6 +1402,11 @@ h1.head-title-first{
                                     bottom: -15px;
                                     left: 50%;
                                     transform: translateX(-50%);
+                                    display: block;
+
+                                    @include respond-to(mobile){
+                                        display: none;
+                                    }
                                 }
                                }
                             }
@@ -1030,6 +1432,10 @@ h1.head-title-first{
 
             display: flex;
             align-items: flex-start;
+            
+            @include respond-to(tablet){
+                flex-direction: column-reverse;
+            }
 
             .news-pengumuman-left{
                 float: left;
@@ -1043,6 +1449,10 @@ h1.head-title-first{
 
                 margin-top: 2rem;
 
+                @include respond-to(tablet){
+                    width: 100%;
+                }
+
                 .news-title{
                     font-size: 1rem;
                     font-weight: 700;
@@ -1053,6 +1463,10 @@ h1.head-title-first{
                     width: 100%;
                     height: 300px;
                     object-fit: cover;
+
+                    @include respond-to(mobile){
+                        height: 150px;
+                    }
                 }
 
                 .image-pengumaman{
@@ -1115,7 +1529,7 @@ h1.head-title-first{
     position: fixed;
     top: 0;
     width: 100%;
-    max-width: 650px;
+    max-width: 780px;
     height: 100%;
     right: 0;
     z-index: 2100;
@@ -1124,6 +1538,7 @@ h1.head-title-first{
     box-sizing: border-box;
     box-shadow: -3px 0px 22px -6px rgba(0,0,0,0.15);
     display: none;
+    overflow-x: scroll;
 
     &.show{
         display: block;
@@ -1156,31 +1571,57 @@ h1.head-title-first{
     }
 
     &__header{
-        position: fixed;
-        top: 0;
-        right: 0;
+        position: relative;
         width: 100%;
-        max-width: 650px;
         background-color: #fff;
-        padding: 1rem;
         box-sizing: border-box;
-        box-shadow: 0px 5px 52px -25px rgba(0,0,0,0.14);
+        margin-bottom: 1rem;
 
         h1{
             color: $secondary-color;
             font-size: 1.4rem;
             line-height: 1.4;
             font-weight: 900;
+
+            @include respond-to(mobile){
+                font-size: 1.3rem;
+            }
+        }
+
+        button{
+            padding: 0.5rem 1rem ;
+            font-size: 0.9rem;
+            border: solid 1px $primary-color;
+            background-color: $primary-color;
+            color: #fff;
+            margin-top: 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .news-category{
+            color: $success-color;
+            margin-left: 1rem;
+        }
+    }
+
+    .inline{
+        img{
+            width: 13px;
+        }
+        p{
+            font-size: 0.9rem;
         }
     }
 
     &__body{
-        margin-top: 3.5rem;
+        margin-top: 0rem;
         height: 100%;
-        overflow-x: scroll;
 
         .image-article{
             width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
 
         p{
@@ -1189,14 +1630,43 @@ h1.head-title-first{
             line-height: 1.5;
 
             &:nth-child(1){
-                margin-top: 0.75rem;
+                margin-bottom: 1rem;
             }
 
             &:nth-child(n+2){
                 margin-top: 0.5rem;
             }
         }
+
+        > button{
+            padding: 0.5rem 1rem ;
+            font-size: 0.9rem;
+            border: solid 1px $primary-color;
+            background-color: $primary-color;
+            color: #fff;
+            margin-top: 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+        }
     }
+
+    .share-artikel{
+        margin-top: 1.5rem;
+       
+        &__title{
+            font-size: 1rem;
+        }
+
+        &__social-media{
+
+            margin-top: 0.5rem;
+
+            img{
+                width: 30px;
+            }
+        }
+    }
+
 
 
 }
